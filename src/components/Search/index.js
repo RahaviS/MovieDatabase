@@ -56,16 +56,16 @@ const Search = () => {
         const {searchResponse, onTriggerSearchingQuery} = value
 
         return (
-          <>
+          <div className="route-page-body">
             <Navbar />
-            <div className="route-page-body">
+            <div className="search-contents">
               {renderSearchResultViews(value)}
             </div>
             <Pagination
               totalPages={searchResponse.totalPages}
               apiCallback={onTriggerSearchingQuery}
             />
-          </>
+          </div>
         )
       }}
     </MovieDbContext.Consumer>

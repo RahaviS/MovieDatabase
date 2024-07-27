@@ -59,9 +59,9 @@ class Upcoming extends React.Component {
     const {isLoading, upcomingMovieResponse} = this.state
 
     return (
-      <>
+      <div className="route-page-body">
         <Navbar />
-        <div className="route-page-body">
+        <div className="upcoming-contents">
           {isLoading
             ? this.renderLoadingView()
             : this.renderPopularMoviesList()}
@@ -70,7 +70,7 @@ class Upcoming extends React.Component {
           totalPages={upcomingMovieResponse.totalPages}
           apiCallback={this.getUpcomingMoviesResponse}
         />
-      </>
+      </div>
     )
   }
 }

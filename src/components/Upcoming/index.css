@@ -7,6 +7,13 @@
   padding: 0px;
   margin-bottom: 0px;
 }
+.upcoming-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 @media screen and (max-width: 1200px) {
   .movie-list-container {
     display: flex;

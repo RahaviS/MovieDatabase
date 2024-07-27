@@ -7,12 +7,8 @@ const Navbar = props => {
   const renderSearchBar = () => (
     <MovieDbContext.Consumer>
       {value => {
-        const {
-          onTriggerSearchingQuery,
-          onChangeSearchInput,
-          searchInput,
-          apiStatus,
-        } = value
+        const {onTriggerSearchingQuery, onChangeSearchInput} = value
+        const {searchInput} = value
 
         const onChangeHandler = event => onChangeSearchInput(event.target.value)
 

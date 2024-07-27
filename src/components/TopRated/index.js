@@ -59,9 +59,9 @@ class TopRated extends React.Component {
     const {isLoading, topRatedMovieResponse} = this.state
 
     return (
-      <>
+      <div className="route-page-body">
         <Navbar />
-        <div className="route-page-body">
+        <div className="top-rated-contents">
           {isLoading
             ? this.renderLoadingView()
             : this.renderPopularMoviesList()}
@@ -70,7 +70,7 @@ class TopRated extends React.Component {
           totalPages={topRatedMovieResponse.totalPages}
           apiCallback={this.getTopRatedMoviesResponse}
         />
-      </>
+      </div>
     )
   }
 }
